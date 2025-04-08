@@ -20,24 +20,34 @@ document.addEventListener("DOMContentLoaded", () => {
           Voici quelques projets récents :
           <div class="gallery">
             <div class="gallery-item">
-                <img src="images/booki.png" alt="Booki">
-                <div class="caption">Booki (OC Course)</div>
+                <a href="https://anlekg.github.io/project1-booki/">
+                  <img src="images/booki.png" alt="Booki">
+                  <div class="caption">Booki (OC Course)</div>
+                </a>
             </div>
             <div class="gallery-item">
-                <img src="images/sophie.png" alt="Sophie Bluel">
-                <div class="caption">Sophie Bluel (OC Course)</div>
+                <a href="">
+                  <img src="images/sophie.png" alt="Sophie Bluel">
+                  <div class="caption">Sophie Bluel (OC Course)</div>
+                </a>
             </div>
             <div class="gallery-item">
-                <img src="images/nina.png" alt="Nina Carducci">
-                <div class="caption">Nina Carducci (OC Course)</div>
+                <a href="https://anlekg.github.io/Nina-Carducci-Dev/">
+                  <img src="images/nina.png" alt="Nina Carducci">
+                  <div class="caption">Nina Carducci (OC Course)</div>
+                </a>
             </div>
             <div class="gallery-item">
-                <img src="images/kasa.png" alt="Kasa">
-                <div class="caption">Kasa (OC Course)</div>
+                <a href="">
+                  <img src="images/kasa.png" alt="Kasa">
+                  <div class="caption">Kasa (OC Course)</div>
+                </a>
             </div>
             <div class="gallery-item">
-                <img src="images/mvg.png" alt="Mon Vieux Grimoire">
-                <div class="caption">Mon Vieux Grimoire (OC Course)</div>
+                <a href="">
+                  <img src="images/mvg.png" alt="Mon Vieux Grimoire">
+                  <div class="caption">Mon Vieux Grimoire (OC Course)</div>
+                </a>
             </div>
             </div>
         </p>
