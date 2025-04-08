@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alexandre Gallic</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+
+<body>
+  <div class="main-container">
+    <aside class="sidebar">
+      <div class="logo"><img src="images/server.webp"></div>
+      <nav class="nav">
+        <ul>
+          <li id="about-me" class="nav-item"># 👨‍🦰【about-me】</li>
+          <li id="portfolio" class="nav-item"># 📖【portfolio】</li>
+          <li id="resume" class="nav-item"># 🗒️【resume】</li>
+          <li id="contact" class="nav-item">🔊📲【contact】</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <header class="channel-header"></header>
+      <section class="channel-content">
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("fa4SwKmCdR9vvQyUT");
+    })();
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.addEventListener("submit", function (event) {
+        if (event.target && event.target.id === "contact-form") {
+          event.preventDefault();
+
+          emailjs.sendForm("service_wyue41c", "template_9e5905g", event.target)
+            .then(() => {
+              alert("Message envoyé avec succès !");
+              event.target.reset();
+            }, (error) => {
+              alert("Échec de l'envoi : " + JSON.stringify(error));
+            });
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
