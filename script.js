@@ -123,6 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <input type="submit" value="Envoyer">
         </form>
         </p>
+        <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
       `
     }
   };
@@ -134,6 +135,17 @@ document.addEventListener("DOMContentLoaded", () => {
       month: "short",
       year: "numeric"
     });
+  }
+
+  function loadLinkedInScript() {
+    if (!document.getElementById('linkedin-badge-script')) {
+      const script = document.createElement('script');
+      script.src = "https://platform.linkedin.com/badges/js/profile.js";
+      script.async = true;
+      script.defer = true;
+      script.id = 'linkedin-badge-script';
+      document.body.appendChild(script);
+    }
   }
 
   navItems.forEach(item => {
@@ -163,6 +175,13 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
         `;
         content.classList.add("fade-in");
+        if (key == "contact") {loadLinkedInScript();}
+        else {
+          if (document.getElementById('linkedin-badge-script')) {
+            lnscript = document.getElementById('linkedin-badge-script');
+            lnscript.remove();
+          }
+        };
       }
     });
   });

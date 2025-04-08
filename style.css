@@ -367,6 +367,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  body{
+    overflow: auto;
+  }
   .main-container {
     flex-direction: column;
   }
@@ -379,8 +382,13 @@ body {
 
   .nav {
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
+  }
+
+  .nav ul {
+    flex-wrap: wrap;
   }
 
   .nav ul,
