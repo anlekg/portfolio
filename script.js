@@ -19,35 +19,25 @@ document.addEventListener("DOMContentLoaded", () => {
         <p>
           Voici quelques projets récents :
           <div class="gallery">
-            <div class="gallery-item">
-                <a href="https://anlekg.github.io/project1-booki/">
-                  <img src="images/booki.png" alt="Booki">
-                  <div class="caption">Booki (OC Course)</div>
-                </a>
+            <div class="gallery-item" onclick="openModal('Booki (OC Course)', 'Une application web de réservation de chambre d\\'hôtel. Developpée en HTML et en CSS', 'https://anlekg.github.io/project1-booki/')">
+                <img src="images/booki.png" alt="Booki">
+                <div class="caption">Booki (OC Course)</div>
             </div>
-            <div class="gallery-item">
-                <a href="">
-                  <img src="images/sophie.png" alt="Sophie Bluel">
-                  <div class="caption">Sophie Bluel (OC Course)</div>
-                </a>
+            <div class="gallery-item" onclick="openModal('Sophie Bluel (OC Course)', 'Un portfolio pour une designer d\\'espaces. Developpée en JS', '/')">
+                <img src="images/sophie.png" alt="Sophie Bluel">
+                <div class="caption">Sophie Bluel (OC Course)</div>
             </div>
-            <div class="gallery-item">
-                <a href="https://anlekg.github.io/Nina-Carducci-Dev/">
-                  <img src="images/nina.png" alt="Nina Carducci">
-                  <div class="caption">Nina Carducci (OC Course)</div>
-                </a>
+            <div class="gallery-item" onclick="openModal('Nina Carducci (OC Course)', 'Un portfolio pour une photographe. Optimisation SEO / Accessibilité', 'https://anlekg.github.io/Nina-Carducci-Dev/')">
+                <img src="images/nina.png" alt="Nina Carducci">
+                <div class="caption">Nina Carducci (OC Course)</div>
             </div>
-            <div class="gallery-item">
-                <a href="">
-                  <img src="images/kasa.png" alt="Kasa">
-                  <div class="caption">Kasa (OC Course)</div>
-                </a>
+            <div class="gallery-item" onclick="openModal('Kasa (OC Course)', 'Une application de réservation d\\'appartements entre particuliers. Developée sous React', '/')">
+                <img src="images/kasa.png" alt="Kasa">
+                <div class="caption">Kasa (OC Course)</div>
             </div>
-            <div class="gallery-item">
-                <a href="">
-                  <img src="images/mvg.png" alt="Mon Vieux Grimoire">
-                  <div class="caption">Mon Vieux Grimoire (OC Course)</div>
-                </a>
+            <div class="gallery-item" onclick="openModal('Mon Vieux Grimoire (OC Course)', 'Une application de notation de livres. Developée sous Express + MongoDB', '/')">
+                <img src="images/mvg.png" alt="Mon Vieux Grimoire">
+                <div class="caption">Mon Vieux Grimoire (OC Course)</div>
             </div>
             </div>
         </p>
@@ -204,3 +194,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   loadPageFromHash();
 });
+
+function openModal(title, description, link) {
+  document.getElementById('modal-title').innerText = title;
+  document.getElementById('modal-description').innerText = description;
+  document.getElementById('modal-link').href = link;
+  document.getElementById('project-modal').classList.remove('hidden');
+}
+
+function closeModal() {
+  document.getElementById('project-modal').classList.add('hidden');
+}
